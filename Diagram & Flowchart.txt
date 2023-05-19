@@ -1,0 +1,172 @@
+  SQL
+  
+  +------------------+
+  |     Client       |
+  +--------+---------+
+           |
+           | 1. Register
+           |
+  +--------v---------+
+  |    Server/API    |
+  +--------+---------+
+           |
+           | 2. Save User to MongoDB
+           |
+  +--------v---------+
+  |     MongoDB      |
+  +------------------+
+
+
+
+
+
+
+Flowchart
+
++----------------------+
+|   User Registration   |
++----------------------+
+           |
+           v
+     +--------------+
+     |    Client    |
+     +-------+------+
+             |
+             | 1. User enters registration details
+             |
+             v
+     +-------+------+
+     |    Server    |
+     +-------+------+
+             |
+             | 2. Server receives registration request
+             |
+             v
+     +-------+------+
+     |   MongoDB    |
+     +-------+------+
+             |
+             | 3. Server saves user details to MongoDB
+             |
+             v
++----------------------+
+|   User Registration   |
+|     Successful!      |
++----------------------+
+
+
+
+
+
+
+User Login Flow:
+
+  +------------------+
+  |     Client       |
+  +--------+---------+
+           |
+           | 1. Login
+           |
+  +--------v---------+
+  |    Server/API    |
+  +--------+---------+
+           |
+           | 2. Validate Credentials
+           |
+  +--------v---------+
+  |     MongoDB      |
+  +------------------+
+
+
+
+
+
+SQL Flowchart
+
++------------------+
+|   User Login     |
++------------------+
+           |
+           v
+     +--------------+
+     |    Client    |
+     +-------+------+
+             |
+             | 1. User enters login credentials
+             |
+             v
+     +-------+------+
+     |    Server    |
+     +-------+------+
+             |
+             | 2. Server validates user credentials
+             |
+             v
+     +-------+------+
+     |   MongoDB    |
+     +-------+------+
+             |
+             | 3. Server queries MongoDB for user matching credentials
+             |
+             v
++------------------+
+|   User Authenticated |
++------------------+
+
+
+
+
+Access protected Routes:
+
+
+  +------------------+
+  |     Client       |
+  +--------+---------+
+           |
+           | 1. Access Protected Route
+           |
+  +--------v---------+
+  |    Server/API    |
+  +--------+---------+
+           |
+           | 2. Validate Token
+           |
+  +--------v---------+
+  |     MongoDB      |
+  +------------------+
+  
+  
+  Flowchart:
+  
+  +---------------------+
+| Access Protected    |
+|        Route        |
++---------------------+
+           |
+           v
+     +--------------+
+     |    Client    |
+     +-------+------+
+             |
+             | 1. User requests access to protected route
+             |
+             v
+     +-------+------+
+     |    Server    |
+     +-------+------+
+             |
+             | 2. Server validates user token
+             |
+             v
+     +-------+------+
+     |   MongoDB    |
+     +-------+------+
+             |
+             | 3. Server verifies token with MongoDB
+             |
+             v
++---------------------+
+|     Authorized      |
+|     Access Granted
+
+

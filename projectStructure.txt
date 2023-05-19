@@ -1,0 +1,25 @@
+- src
+  - components
+    - Dictionary.js
+    - TermForm.js
+    - TermList.js
+    - TermDetails.js
+    - TermApprovalList.js
+    - ...
+  - config
+    - database.js
+  - routes
+    - termRoutes.js
+    - authRoutes.js
+  - controllers
+    - termController.js
+    - authController.js
+  - models
+    - Term.js
+    - User.js
+  - index.js
+- public
+  - index.html
+- package.json
+- webpack.config.js
+- ...
